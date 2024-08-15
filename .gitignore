@@ -1,0 +1,10 @@
+# IDEs
+.idea
+
+dsa-go.iml
+
+# Environments
+.env
+
+# Temporary files
+tmp
