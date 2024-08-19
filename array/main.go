@@ -5,6 +5,33 @@ import "log"
 func main() {
 	rotationTestCases()
 	rearrangingTestCases()
+	rangeTestCases()
+}
+
+// lcd using gcd algorithm.
+func lcd(a, b int) int {
+	if a == 0 && b == 0 {
+		return 0
+	}
+
+	return a * b / gcd(a, b)
+}
+
+// gcd using Euclides algorithm.
+func gcd(a, b int) int {
+	if b == 0 {
+		return a
+	}
+
+	return gcd(b, a%b)
+}
+
+func rangeTestCases() {
+	log.Println("Range Cases")
+	arr := []int{5, 7, 5, 2, 10, 12, 11, 17, 14, 1, 44}
+	queries := [][]int{{2, 5}, {5, 10}, {0, 10}}
+	result := rangeLCMQueries(arr, queries)
+	log.Println(result)
 }
 
 func rearrangingTestCases() {

@@ -42,15 +42,6 @@ func secondApproach(arr []int, d int) []int {
 	return arr
 }
 
-// gcd using Euclides algorithm.
-func gcd(a, b int) int {
-	if b == 0 {
-		return a
-	}
-
-	return gcd(b, a%b)
-}
-
 // thirdApproach Time O(N) with Space O(1).
 func thirdApproach(arr []int, d int) []int {
 	log.Println("thirdApproach", arr)
