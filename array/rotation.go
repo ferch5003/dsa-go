@@ -2,20 +2,10 @@ package main
 
 import "log"
 
-func main() {
-	arr := []int{1, 2, 3, 4, 5, 6, 7}
-	d := 2
-
-	for i := range d {
-		// result := firstApproach(arr, i)
-		// result := secondApproach(arr, i)
-		result := thirdApproach(arr, i)
-		log.Println(i, result)
-	}
-}
-
 // firstApproach Time O(N) with Space O(N) by using second array.
 func firstApproach(arr []int, d int) []int {
+	log.Println("firstApproach", arr)
+
 	var newArr []int
 	n := len(arr)
 
@@ -33,6 +23,8 @@ func firstApproach(arr []int, d int) []int {
 
 // secondApproach Time O(d) with Space O(1).
 func secondApproach(arr []int, d int) []int {
+	log.Println("secondApproach", arr)
+
 	if d == 0 {
 		return arr
 	}
@@ -61,6 +53,8 @@ func gcd(a, b int) int {
 
 // thirdApproach Time O(N) with Space O(1).
 func thirdApproach(arr []int, d int) []int {
+	log.Println("thirdApproach", arr)
+
 	n := len(arr)
 
 	if d%n == 0 {
