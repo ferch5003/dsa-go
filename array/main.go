@@ -6,6 +6,7 @@ func main() {
 	rotationTestCases()
 	rearrangingTestCases()
 	rangeTestCases()
+	subArrayTestCases()
 }
 
 // lcd using gcd algorithm.
@@ -24,6 +25,13 @@ func gcd(a, b int) int {
 	}
 
 	return gcd(b, a%b)
+}
+
+func subArrayTestCases() {
+	log.Println("Sub Array Cases")
+	arr := []int{-2, -3, 4, -1, -2, 1, 5, -3}
+	result := maxSubArray(arr)
+	log.Println(result)
 }
 
 func rangeTestCases() {
