@@ -15,6 +15,7 @@ func kadanesAlgorithm(arr []int) int {
 	return maxSoFar
 }
 
+// maxSubArray O(N), Time Complexity T(N) = 2N
 func maxSubArray(arr []int) int {
 	return kadanesAlgorithm(arr)
 }

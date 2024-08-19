@@ -7,6 +7,7 @@ func main() {
 	rearrangingTestCases()
 	rangeTestCases()
 	subArrayTestCases()
+	sortTestCases()
 }
 
 // lcd using gcd algorithm.
@@ -25,6 +26,13 @@ func gcd(a, b int) int {
 	}
 
 	return gcd(b, a%b)
+}
+
+func sortTestCases() {
+	log.Println("Sort Cases")
+	arr := []int{0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
+	result := sortZerosOnesAndTwos(arr)
+	log.Println(result)
 }
 
 func subArrayTestCases() {
